@@ -1,0 +1,27 @@
+name: responsive_layout
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    paths:
+      - "packages/responsive_layout/**"
+      - ".github/workflows/responsive_layout.yaml"
+    branches:
+      - main
+  pull_request:
+    paths:
+      - "packages/responsive_layout/**"
+      - ".github/workflows/responsive_layout.yaml"
+    branches:
+      - main
+
+jobs:
+  build:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
+    with:
+      flutter_channel: stable
+      flutter_version: "3.24.1"
+      working_directory: "packages/responsive_layout"
