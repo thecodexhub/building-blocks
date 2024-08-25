@@ -1,7 +1,4 @@
 library responsive_layout;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/breakpoints.dart';
+export 'src/responsive_layout_builder.dart';
