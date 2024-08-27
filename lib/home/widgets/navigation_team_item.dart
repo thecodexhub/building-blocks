@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 /// {@template navigation_team_item}
 /// Widget that displays team items in the navigation.
-/// 
+///
 /// Uses [ListTile] widget.
 /// {@endtemplate}
 class NavigationTeamItem extends StatelessWidget {
@@ -15,7 +15,7 @@ class NavigationTeamItem extends StatelessWidget {
   });
 
   /// Title for the navigation team item.
-  /// 
+  ///
   /// The first character of the title will be used in the laeding.
   final String title;
 

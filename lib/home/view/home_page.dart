@@ -29,28 +29,28 @@ class HomePageLargeLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-        body: Row(
-          children: [
-            SizedBox(
-              width: 304,
-              child: Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 16,
-                  vertical: 32,
-                ),
-                child: NavigationDrawer(),
+      body: Row(
+        children: [
+          SizedBox(
+            width: 304,
+            child: Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: 16,
+                vertical: 32,
               ),
+              child: NavigationDrawer(),
             ),
-            VerticalDivider(
-              color: Colors.black26,
-              thickness: 0.4,
-            ),
-            Expanded(
-              child: SizedBox(),
-            ),
-          ],
-        ),
-      );
+          ),
+          VerticalDivider(
+            color: Colors.black26,
+            thickness: 0.4,
+          ),
+          Expanded(
+            child: SizedBox(),
+          ),
+        ],
+      ),
+    );
   }
 }
 
