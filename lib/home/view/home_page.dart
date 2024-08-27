@@ -38,7 +38,7 @@ class HomePageLargeLayout extends StatelessWidget {
                 horizontal: 16,
                 vertical: 32,
               ),
-              child: NavigationDrawer(),
+              child: NavigationDrawerWidget(),
             ),
           ),
           VerticalDivider(
@@ -71,7 +71,7 @@ class HomePageMediumLayout extends StatelessWidget {
             horizontal: 12,
             vertical: kIsWeb ? 24 : kToolbarHeight + 16,
           ),
-          child: NavigationDrawer(),
+          child: NavigationDrawerWidget(),
         ),
       ),
       body: Row(
@@ -110,7 +110,7 @@ class HomePageSmallLayout extends StatelessWidget {
             horizontal: 12,
             vertical: kIsWeb ? 24 : kToolbarHeight + 16,
           ),
-          child: NavigationDrawer(),
+          child: NavigationDrawerWidget(),
         ),
       ),
     );
@@ -188,12 +188,12 @@ class NavigationRailWidget extends StatelessWidget {
   }
 }
 
-/// {@template navigation_drawer}
+/// {@template navigation_drawer_widget}
 /// Displays the navigation items in a listview.
 /// {@endtemplate}
-class NavigationDrawer extends StatelessWidget {
-  /// {@macro navigation_drawer}
-  const NavigationDrawer({super.key});
+class NavigationDrawerWidget extends StatelessWidget {
+  /// {@macro navigation_drawer_widget}
+  const NavigationDrawerWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -215,32 +215,38 @@ class NavigationDrawer extends StatelessWidget {
         ),
         const SizedBox(height: 32),
         NavigationItem(
+          key: const Key('navigation_item_dashboard'),
           title: 'Dashboard',
           icon: Icons.home_outlined,
           selected: true,
           onTap: () {},
         ),
         NavigationItem(
+          key: const Key('navigation_item_teams'),
           title: 'Teams',
           icon: Icons.people_outline,
           onTap: () {},
         ),
         NavigationItem(
+          key: const Key('navigation_item_projects'),
           title: 'Projects',
           icon: Icons.folder_copy_outlined,
           onTap: () {},
         ),
         NavigationItem(
+          key: const Key('navigation_item_calendar'),
           title: 'Calendar',
           icon: Icons.calendar_today_outlined,
           onTap: () {},
         ),
         NavigationItem(
+          key: const Key('navigation_item_documents'),
           title: 'Documents',
           icon: Icons.file_copy_outlined,
           onTap: () {},
         ),
         NavigationItem(
+          key: const Key('navigation_item_reports'),
           title: 'Reports',
           icon: Icons.leaderboard_outlined,
           onTap: () {},
@@ -258,15 +264,18 @@ class NavigationDrawer extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         NavigationTeamItem(
+          key: const Key('navigation_team_item_1'),
           title: 'Apex Horizon',
           selected: true,
           onTap: () {},
         ),
         NavigationTeamItem(
+          key: const Key('navigation_team_item_2'),
           title: 'Quantum Surge',
           onTap: () {},
         ),
         NavigationTeamItem(
+          key: const Key('navigation_team_item_3'),
           title: 'Cipher',
           onTap: () {},
         ),
